@@ -1,0 +1,1 @@
+(SELECT AVG(price) FROM products) FROM products WHERE brand='wike' AND products.price<(SELECT AVG(price) FROM products );
