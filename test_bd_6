@@ -1,0 +1,1 @@
+SELECT *, (SELECT MAX(rating) From products) FROM products WHERE category='food' AND products.price=(SELECT MIN(price) FROM products );
