@@ -1,0 +1,2 @@
+psql test_bd
+\d products
