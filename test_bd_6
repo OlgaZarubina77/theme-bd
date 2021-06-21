@@ -1,1 +1,1 @@
-SELECT *, (SELECT MAX(rating) From products) FROM products WHERE category='food' AND products.price=(SELECT MIN(price) FROM products );
+SELECT *, (SELECT AVG(price)/2 FROM products) FROM products WHERE products.price<(SELECT AVG(price)/2 FROM products)  AND products.rating<(SELECT AVG(rating)*1.5 FROM products);
